@@ -1,1 +1,13 @@
+1470.
+class Solution(object):
+    def shuffle(self, nums, n):
+        a=len(nums)
+        z=nums[0:n]
+        x=nums[n:a]
+        m=[]
+        for i in range(n):
+            m.append(z[i])
+            m.append(x[i])
+        return m
+
 
