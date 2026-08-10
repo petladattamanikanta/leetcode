@@ -10,4 +10,97 @@ class Solution(object):
             m.append(x[i])
         return m
 
+1450.
+class Solution(object):
+    def busyStudent(self, startTime, endTime, queryTime):
+        c=0
+        for i in range(len(endTime)):
+            if startTime[i]<=queryTime and queryTime<=endTime[i]:
+                c+=1
+        return c
+
+3285.
+class Solution(object):
+    def stableMountains(self, height, threshold):
+        z=[]
+        for i in range(1,len(height)):
+            if height[i-1]>threshold:
+                z.append(i)
+                
+        return z
+
+3065.
+class Solution(object):
+    def minOperations(self, nums, k):
+        c=0
+        for i in nums:
+            if i<k:
+                c+=1
+        return c
+
+3264.
+class Solution(object):
+    def getFinalState(self, nums, k, multiplier):
+        for i in range(k):
+            m=min(nums)
+            a=nums.index(m)
+            nums[a]*=multiplier
+        return nums
+
+1816.
+class Solution(object):
+    def truncateSentence(self, s, k):
+        a=s.split()
+        b=a[:k]
+        z=" ".join(b)
+        return z
+
+1688.
+class Solution(object):
+    def numberOfMatches(self, n):
+        return n-1
+
+1662.
+class Solution(object):
+    def arrayStringsAreEqual(self, word1, word2):
+        z=word1
+        a="".join(z)
+        x=word2
+        b="".join(x)
+        if a==b:
+            return True
+        return False
+
+2652.
+class Solution(object):
+    def sumOfMultiples(self, n):
+        z=0
+        for i in range(1,n+1):
+            if i%3==0 or i%5==0 or i%7==0:
+                z+=i
+        return z
+
+2000.class Solution(object):
+    def reversePrefix(self, word, ch):
+        a = list(word)
+        z = []
+
+        if ch not in word:
+            return word
+
+        b = 0
+        for i in range(len(a)):
+            z.append(a[i])
+            b += 1
+
+            if a[i] == ch:
+                break
+
+        l=z[::-1]
+        a[:b] = l
+
+        return "".join(a)
+
+        
+
 
